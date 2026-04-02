@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --slyd-black: #0A0A0A;
+  --slyd-dark: #141416;
+  --slyd-card: #1C1C1E;
+  --slyd-border: #2C2C2E;
+  --slyd-muted: #8E8E93;
+  --slyd-accent: #3B9EFF;
+  --slyd-accent-light: #6BB5FF;
+  --slyd-gradient-start: #3B9EFF;
+  --slyd-gradient-end: #42D4FF;
+  --slyd-online: #30D158;
+  --slyd-premium: #3B9EFF;
+}
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button, nav, nav * {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  body {
+    background-color: var(--slyd-black);
+    color: #FAFAFA;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overscroll-behavior: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+}
+
+@layer utilities {
+  .slyd-gradient {
+    background: linear-gradient(135deg, var(--slyd-gradient-start), var(--slyd-gradient-end));
+  }
+
+  .slyd-gradient-text {
+    background: linear-gradient(135deg, var(--slyd-gradient-start), var(--slyd-gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .slyd-card {
+    background-color: var(--slyd-card);
+    border: 1px solid var(--slyd-border);
+    border-radius: 16px;
+  }
+
+  .slyd-glass {
+    background: rgba(28, 28, 30, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 16px);
+  }
+}

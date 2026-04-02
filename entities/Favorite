@@ -1,0 +1,24 @@
+{
+  "name": "Favorite",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email of user who favorited"
+    },
+    "favorited_email": {
+      "type": "string",
+      "description": "Email of favorited user"
+    },
+    "favorited_name": {
+      "type": "string"
+    },
+    "favorited_avatar": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "user_email",
+    "favorited_email"
+  ]
+}

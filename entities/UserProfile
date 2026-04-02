@@ -1,0 +1,182 @@
+{
+  "name": "UserProfile",
+  "type": "object",
+  "properties": {
+    "display_name": {
+      "type": "string",
+      "description": "Display name shown to others"
+    },
+    "bio": {
+      "type": "string",
+      "description": "Short bio or about me"
+    },
+    "age": {
+      "type": "number",
+      "description": "User's age"
+    },
+    "height": {
+      "type": "string",
+      "description": "Height display string"
+    },
+    "weight": {
+      "type": "string",
+      "description": "Weight display string"
+    },
+    "body_type": {
+      "type": "string",
+      "enum": [
+        "slim",
+        "average",
+        "athletic",
+        "muscular",
+        "stocky",
+        "large"
+      ],
+      "description": "Body type"
+    },
+    "side": {
+      "type": "string",
+      "enum": [
+        "top",
+        "bottom",
+        "versatile",
+        "vers_top",
+        "vers_bottom",
+        "side"
+      ],
+      "description": "Sexual position preference"
+    },
+    "meeting_intent": {
+      "type": "string",
+      "enum": [
+        "right_now",
+        "today",
+        "this_week",
+        "just_browsing"
+      ],
+      "description": "How soon user wants to meet"
+    },
+    "ethnicity": {
+      "type": "string",
+      "description": "Ethnicity"
+    },
+    "looking_for": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "What user is looking for (chat, dates, friends, networking, etc.)"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Interest tags"
+    },
+    "photos": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of photo URLs"
+    },
+    "avatar_url": {
+      "type": "string",
+      "description": "Primary profile photo URL"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "User's last known latitude"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "User's last known longitude"
+    },
+    "is_online": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether user is currently online"
+    },
+    "last_active": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last active timestamp"
+    },
+    "is_premium": {
+      "type": "boolean",
+      "default": false,
+      "description": "Premium subscription status"
+    },
+    "is_verified": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether profile photo is verified"
+    },
+    "is_boosted": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether profile is currently boosted"
+    },
+    "boost_expires": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When boost expires"
+    },
+    "incognito_mode": {
+      "type": "boolean",
+      "default": false,
+      "description": "Hide from grid unless user messages first"
+    },
+    "stealth_mode": {
+      "type": "boolean",
+      "default": false,
+      "description": "Exclude from discovery grid and don't record profile views"
+    },
+    "show_distance": {
+      "type": "boolean",
+      "default": true,
+      "description": "Show distance to other users"
+    },
+    "show_age": {
+      "type": "boolean",
+      "default": true,
+      "description": "Show age on profile"
+    },
+    "visibility": {
+      "type": "string",
+      "enum": [
+        "everyone",
+        "favorites_only",
+        "nobody"
+      ],
+      "default": "everyone",
+      "description": "Profile visibility setting"
+    },
+    "notification_messages": {
+      "type": "boolean",
+      "default": true
+    },
+    "notification_views": {
+      "type": "boolean",
+      "default": true
+    },
+    "notification_favorites": {
+      "type": "boolean",
+      "default": true
+    },
+    "onboarding_complete": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether user completed onboarding"
+    },
+    "user_email": {
+      "type": "string",
+      "description": "Owner email linking to User entity"
+    }
+  },
+  "required": [
+    "display_name",
+    "user_email"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "Report",
+  "type": "object",
+  "properties": {
+    "reporter_email": {
+      "type": "string",
+      "description": "Email of user who reported"
+    },
+    "reported_email": {
+      "type": "string",
+      "description": "Email of reported user"
+    },
+    "reason": {
+      "type": "string",
+      "enum": [
+        "spam",
+        "inappropriate",
+        "harassment",
+        "fake_profile",
+        "underage",
+        "other"
+      ],
+      "description": "Report reason"
+    },
+    "details": {
+      "type": "string",
+      "description": "Additional details"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "reviewed",
+        "resolved",
+        "dismissed"
+      ],
+      "default": "pending"
+    }
+  },
+  "required": [
+    "reporter_email",
+    "reported_email",
+    "reason"
+  ]
+}

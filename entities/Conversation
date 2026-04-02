@@ -1,0 +1,51 @@
+{
+  "name": "Conversation",
+  "type": "object",
+  "properties": {
+    "participants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of two user emails"
+    },
+    "participant_names": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Display names of participants"
+    },
+    "participant_avatars": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Avatar URLs of participants"
+    },
+    "last_message": {
+      "type": "string",
+      "description": "Preview of last message"
+    },
+    "last_message_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of last message"
+    },
+    "last_message_by": {
+      "type": "string",
+      "description": "Email of who sent last message"
+    },
+    "unread_count_user1": {
+      "type": "number",
+      "default": 0
+    },
+    "unread_count_user2": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "participants"
+  ]
+}
